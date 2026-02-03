@@ -11,41 +11,87 @@
     </canvas>
 
     <p id="numdot"> XXX </p>
-<!-- 
-    <button type="button" id="green">Green</button>
-    <button type="button" id="red">Red</button> -->
-    <button type="button" id="clear">Clear</button>
-
-    <button id="pointButton">Point</button>
-    <button id="triButton">Triangle</button>
-    <button id="circleButton">Circle</button>
 
     <p> 
-        Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+        Front Left Leg Angle <input type="range" min="0" max="30" value="0" class="slider" id="frontLeftSlide">
+        Animation: 
+        <button type="button" id="animationFrontLeftOnButton">ON</button>
+        <button type="button" id="animationFrontLeftOffButton">OFF</button>
+
+        Front Left Leg 2 Angle <input type="range" min="0" max="30" value="0" class="slider" id="frontLeft2Slide">
+        Animation: 
+        <button type="button" id="animationFrontLeft2OnButton">ON</button>
+        <button type="button" id="animationFrontLeft2OffButton">OFF</button>
+
+        Back Left Leg Angle <input type="range" min="0" max="30" value="0" class="slider" id="backLeftSlide">
+        Animation: 
+        <button type="button" id="animationBackLeftOnButton">ON</button>
+        <button type="button" id="animationBackLeftOffButton">OFF</button>
+
+        Back Left Leg 2 Angle <input type="range" min="0" max="30" value="0" class="slider" id="backLeft2Slide">
+        Animation: 
+        <button type="button" id="animationBackLeft2OnButton">ON</button>
+        <button type="button" id="animationBackLeft2OffButton">OFF</button>
     </p>
+
     <p> 
-        Green <input type="range" min="0" max="100" value="100" class="slider" id="greenSlide">
+        Front Right Leg Angle <input type="range" min="0" max="30" value="0" class="slider" id="frontRightSlide">
+        Animation: 
+        <button type="button" id="animationFrontRightOnButton">ON</button>
+        <button type="button" id="animationFrontRightOffButton">OFF</button>
+
+        Front Right Leg 2 Angle <input type="range" min="0" max="30" value="0" class="slider" id="frontRight2Slide">
+        Animation: 
+        <button type="button" id="animationFrontRight2OnButton">ON</button>
+        <button type="button" id="animationFrontRight2OffButton">OFF</button>
+
+        Back Right Leg Angle <input type="range" min="0" max="30" value="0" class="slider" id="backRightSlide">
+        Animation: 
+        <button type="button" id="animationBackRightOnButton">ON</button>
+        <button type="button" id="animationBackRightOffButton">OFF</button>
+
+        Back Right Leg 2 Angle <input type="range" min="0" max="30" value="0" class="slider" id="backRight2Slide">
+        Animation: 
+        <button type="button" id="animationBackRight2OnButton">ON</button>
+        <button type="button" id="animationBackRight2OffButton">OFF</button>
     </p>
+
     <p> 
-        Blue <input type="range" min="0" max="100" value="100" class="slider" id="blueSlide">
+        Tail 1 Angle <input type="range" min="0" max="45" value="0" class="slider" id="tail1Slide">
+        Animation: 
+        <button type="button" id="animationTail1OnButton">ON</button>
+        <button type="button" id="animationTail1OffButton">OFF</button>
+
+        Tail 2 Angle <input type="range" min="0" max="30" value="0" class="slider" id="tail2Slide">
+        Animation: 
+        <button type="button" id="animationTail2OnButton">ON</button>
+        <button type="button" id="animationTail2OffButton">OFF</button>
+
+        Tail 3 Angle <input type="range" min="0" max="30" value="0" class="slider" id="tail3Slide">
+        Animation: 
+        <button type="button" id="animationTail3OnButton">ON</button>
+        <button type="button" id="animationTail3OffButton">OFF</button>
     </p>
+
     <p> 
-        Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+        Camera Angle <input type="range" min="-180" max="180" value="0" class="slider" id="angleSlide">
     </p>
-    <p> 
-        Segments <input type="range" min="3" max="20" value="10" class="slider" id="segSlide">
-    </p>
-    <p> 
-        Opacity <input type="range" min="0" max="1" step="0.01" value="1" class="slider" id="opacitySlide">
+
+    <p>
+        Animate All: 
+        <button id="animationAllToggleButton">OFF</button>
+
     </p>
 
     <script src="lib/webgl-utils.js"></script>
     <script src="lib/webgl-debug.js"></script>
     <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
     <script src="Triangle.js"></script>
     <script src="Circle.js"></script>
     <script src="Point.js"></script>
-    <script src="ColoredPoints.js"></script>
+    <script src="Cube.js"></script>
+    <script src="BlockyAnimal.js"></script>
     
   </body>
 </html>
