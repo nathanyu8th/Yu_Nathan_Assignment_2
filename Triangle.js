@@ -54,29 +54,24 @@ function drawTriangle(vertices){
     gl.drawArrays(gl.TRIANGLES, 0, n);
 }
 
-function drawTriangle3D(vertices){
-    var n = 3;
-    if (this.buffer === null){
-        this.buffer = gl.createBuffer();
-        if(!this.buffer) {
-            console.log("Failed to create buffer");
-            return -1;
-        }
+let g_triangle3DBuffer = null;
+
+function drawTriangle3D(vertices) {
+  const n = 3;
+
+  if (!g_triangle3DBuffer) {
+    g_triangle3DBuffer = gl.createBuffer();
+    if (!g_triangle3DBuffer) {
+      console.log("Failed to create buffer");
+      return -1;
     }
+  }
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.DYNAMIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER, g_triangle3DBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.DYNAMIC_DRAW);
 
+  gl.vertexAttribPointer(a_Position, 3, gl.FLOAT, false, 0, 0);
+  gl.enableVertexAttribArray(a_Position);
 
-    // var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
-    // if (a_Position < 0){
-    //     console.log("Failed to get storage location oif a_Position");
-    //     return -1;
-    // }
-
-    gl.vertexAttribPointer(a_Position, 3, gl.FLOAT, false, 0, 0);
-
-    gl.enableVertexAttribArray(a_Position);
-
-    gl.drawArrays(gl.TRIANGLES, 0, n);
+  gl.drawArrays(gl.TRIANGLES, 0, n);
 }
